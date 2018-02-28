@@ -5,9 +5,8 @@ import axios from 'axios';
 import './assets/css/index.scss';
 
 import Header from './containers/header';
+import Main from './containers/main';
 import Footer from './containers/footer';
-import Sidebar from './containers/sidebar';
-import BeerList from './containers/beer_list';
 
 class App extends Component {
   constructor(props) {
@@ -25,10 +24,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
-        <div className="row">
-          <BeerList beer={this.state.beer} />
-          <Sidebar />
-        </div>
+        <Main beer={this.state.beer}/>
         <Footer />
       </div>
     );
