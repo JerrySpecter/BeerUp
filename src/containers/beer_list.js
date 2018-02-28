@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BeerListItem from '../components/beerlist/beer_list_item';
 
 const BeerList = (props) => {

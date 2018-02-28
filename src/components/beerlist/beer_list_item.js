@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
+import BeerListModal from './beer_list_modal';
+import BeerListItemData from './beerlistitem/beer_list_item_data';
+import BeerListItemImg from './beerlistitem/beer_list_item_img';
 
-const BeerListItem = (props) => {
-  const beer = props.beer;
-  const beerName = beer.name;
-  const beerImg = beer.image_url;
-  const beerIbu = beer.ibu;
-  const beerAbv = beer.abv;
-  console.log(beer);
-
-  return (
-    <div className="col-3">
-      <img src={beerImg} />
-      <div>
-        <h4>{beerName}</h4>
-        <div>
-          <span>IBU</span>
-          <span>{beerIbu}</span>
-        </div>
-        <div>
-          <span>ABV</span>
-          <span>{beerAbv}</span>
-        </div>
+class BeerListItem extends Component {
+  render () {
+    return (
+      <div className="col-3">
+        <a type="button" href="#" data-toggle="modal" data-target={'#modal' + this.props.beer.id}>
+          <BeerListItemImg src={this.props.beer.image_url} />
+          <BeerListItemData name={this.props.beer.name} ibu={this.props.beer.ibu} abv={this.props.beer.abv} />
+        </a>
+          <BeerListModal beer={this.props.beer} />
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default BeerListItem;
