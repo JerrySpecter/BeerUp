@@ -1,0 +1,43 @@
+/** [Base Colors] */
+
+$c-y: #ffc80a;
+$c-b: #000000;
+$c-w: #ffffff;
+
+$body-bg-color: #f7f7f7;
+
+/** [Font] */
+
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$letter-spacing-base: 2px;
+
+/** [Buttons] */
+
+$btn-font-size: 12px;
+
+$btn-padding-x: 32px;
+$btn-padding-y: 16px;
+
+$btn-sm-padding-x: 24px;
+$btn-sm-padding-y: 12px;
+
+$btn-secondary-border-width: 2px;
+$btn-secondary-border-radius: 32px;
+
+$btn-primary-color: $c-b;
+$btn-primary-color-hover: #7f392c;
+$btn-primary-color-focus: #5f261b;
+
+$btn-primary-bg-color: $c-y;
+$btn-primary-bg-color-hover: #ffd33d;
+$btn-primary-bg-color-focus: #ffb90a;
+
+$btn-secondary-color: $c-b;
+$btn-secondary-color-hover: $c-w;
+$btn-secondary-color-focus: #f0bd09;
+
+$btn-secondary-bg-color: $c-b;
+$btn-secondary-bg-color-hover: #322702;
+$btn-secondary-bg-color-focus: #524003;
