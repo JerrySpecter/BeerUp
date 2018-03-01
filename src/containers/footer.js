@@ -7,9 +7,11 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <NavLogo />
-        <FooterList />
-        <FooterSocialList />
+        <div className="container">
+          <NavLogo />
+          <FooterList />
+          <FooterSocialList />
+        </div>
       </footer>
     );
   }
