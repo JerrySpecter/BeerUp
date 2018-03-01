@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom'
 
 import './assets/css/index.scss';
 
@@ -31,4 +32,9 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+  <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
