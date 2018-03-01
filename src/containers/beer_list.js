@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import BeerListItem from '../components/beerlist/beer_list_item';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const BeerList = (props) => {
+class BeerList extends Component {
+  render() {
+    const beerListItems = this.props.beer.map((beer) => {
+      return <BeerListItem key={beer.id} beer={beer} />
+    });
 
-  const beerListItems = props.beer.map((beer) => {
-    return <BeerListItem key={beer.id} beer={beer} />
-  });
+    console.log(this);
 
-  return (
-
-    <div className="col-9">
-      <div className="row">
-        {beerListItems}
+    return (
+      <div className="row beer-list">
+          <Switch>
+            <Route exact path="/" render={()=>beerListItems}/>
+            <Route exact path="/favorites" render={()=>beerListItems}/>
+          </Switch>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default BeerList;
