@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HeroTitle extends Component {
   render() {
     return (
-      <h1 className="display-4">{this.props.title}</h1>
+      <h1 className="hero__title">{this.props.title}</h1>
     );
   }
 }

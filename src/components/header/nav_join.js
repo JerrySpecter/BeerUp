@@ -5,7 +5,7 @@ class NavJoin extends Component {
   render() {
     return (
       <li className="nav-item active">
-        <Link className="nav-link" to={this.props.href}>{this.props.title}</Link>
+        <Link className="btn btn--secondary btn--sm" to={this.props.href}>{this.props.title}</Link>
       </li>
     );
   }

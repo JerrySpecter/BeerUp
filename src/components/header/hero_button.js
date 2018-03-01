@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HeroButton extends Component {
   render() {
     return (
-      <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <a className="btn btn--primary" href="#" role="button">Join beerup</a>
     );
   }
 }
