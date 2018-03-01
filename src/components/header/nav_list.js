@@ -8,9 +8,9 @@ class NavList extends Component {
     return (
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <NavListItem title="Link 1" href="/" />
-          <NavListItem title="Link 2" href="/favorites" />
-          <NavJoin title="Link 3" href="/join-us" />
+          <NavListItem title="Home" href="/" />
+          <NavListItem title="Favorites" href="/favorites" />
+          <NavJoin title="Join" href="/join-us" />
         </ul>
       </div>
     );
