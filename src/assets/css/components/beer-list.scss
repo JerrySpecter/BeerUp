@@ -1,0 +1,33 @@
+.beer-list {
+  padding: 64px 0;
+  position: relative;
+  min-width: 100%;
+  min-height: 90vh;
+
+  &__title {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  &:before {
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg width='48px' height='17px' viewBox='0 0 48 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3ecap%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='assets' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-267.000000, -173.000000)'%3e%3cg id='cap' transform='translate(267.000000, 173.000000)' fill='%23F2CD30' fill-rule='nonzero'%3e%3cpath d='M48,9.21969834 L48,14.7198486 C46.6883236,15.7996515 45.5196649,17 42.9281847,17 C38.1922566,17 38.1922566,12.9995193 33.4563285,12.9995193 C28.7285729,12.9995193 28.7285729,17 23.9926448,17 C19.2567167,17 19.2567167,12.9995193 14.5281438,12.9995193 C9.79221575,12.9995193 9.79221575,17 5.06446011,17 C2.48033507,17 1.30432118,15.8098672 0,14.7300643 L0,9.21969834 C5.80686678e-15,4.13022054 3.30411687,0 7.3756257,0 L40.6235571,0 C44.6958831,0 48,4.13022054 48,9.21969834 Z' transform='translate(24.000000, 8.500000) scale(1, -1) translate(-24.000000, -8.500000) '%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    top: -10px;
+    right: 80px;
+    width: 60px;
+    height: 20px;
+    position: absolute;
+  }
+
+  &:after {
+    content: '';
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8'?%3e%3csvg width='48px' height='17px' viewBox='0 0 48 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3ecap%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='assets' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-267.000000, -173.000000)'%3e%3cg id='cap' transform='translate(267.000000, 173.000000)' fill='%23F2CD30' fill-rule='nonzero'%3e%3cpath d='M48,9.21969834 L48,14.7198486 C46.6883236,15.7996515 45.5196649,17 42.9281847,17 C38.1922566,17 38.1922566,12.9995193 33.4563285,12.9995193 C28.7285729,12.9995193 28.7285729,17 23.9926448,17 C19.2567167,17 19.2567167,12.9995193 14.5281438,12.9995193 C9.79221575,12.9995193 9.79221575,17 5.06446011,17 C2.48033507,17 1.30432118,15.8098672 0,14.7300643 L0,9.21969834 C5.80686678e-15,4.13022054 3.30411687,0 7.3756257,0 L40.6235571,0 C44.6958831,0 48,4.13022054 48,9.21969834 Z' transform='translate(24.000000, 8.500000) scale(1, -1) translate(-24.000000, -8.500000) '%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 60px;
+    height: 20px;
+    position: absolute;
+  }
+}
