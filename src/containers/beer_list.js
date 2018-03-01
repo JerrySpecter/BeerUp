@@ -8,12 +8,21 @@ class BeerList extends Component {
       return <BeerListItem key={beer.id} beer={beer} />
     });
 
+    const titleHome = <h2 className="beer-list__title">Beer</h2>
+    const titleFavorited = <h2 className="beer-list__title">My Favorite Beers</h2>
+
     return (
-      <div className="row beer-list">
-          <Switch>
-            <Route exact path="/" render={()=>beerListItems}/>
-            <Route exact path="/favorites" render={()=>beerListItems}/>
-          </Switch>
+      <div className="beer-list">
+        <Switch>
+          <Route exact path="/" render={()=>titleHome}/>
+          <Route exact path="/favorites" render={()=>titleFavorited}/>
+        </Switch>
+        <div className="row">
+            <Switch>
+              <Route exact path="/" render={()=>beerListItems}/>
+              <Route exact path="/favorites" render={()=>beerListItems}/>
+            </Switch>
+        </div>
       </div>
     );
   }
