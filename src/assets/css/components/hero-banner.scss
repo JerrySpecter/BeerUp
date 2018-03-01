@@ -1,0 +1,48 @@
+.hero {
+  color: $c-w;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 64px;
+  padding-bottom: 64px;
+
+  .hero__wrapper {
+    width: 50%;
+
+    .hero__text {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .hero__title {
+      font-weight: 700;
+      font-size: 4.8rem;
+      margin-bottom: 64px;
+    }
+
+    .hero__button {
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 32px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      background-color: yellow;
+      color: black;
+    }
+  }
+
+  .hero__illustration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero__cap {
+
+  }
+}
