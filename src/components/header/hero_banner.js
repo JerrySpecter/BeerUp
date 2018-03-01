@@ -7,22 +7,31 @@ import HeroButton from './hero_button';
 
 class HeroBanner extends Component {
   render() {
-    const home =
-                <div>
-                  <HeroTitle title="BeerUp" />
-                  <HeroText />
-                  <HeroButton />
-                </div>
-    const favorites =  <HeroTitle title="Favorites" />;
-    const join =  <HeroTitle title="Join Us" />;
+    const home =  <div className="hero__wrapper">
+                    <HeroText />
+                    <HeroTitle title="Join our famous beerup!" />
+                    <HeroButton />
+                  </div>;
+    const favorites = <div className="hero__wrapper">
+                        <HeroTitle title="Favorites" />
+                      </div>;
+    const join =  <div className="hero__wrapper">
+                    <HeroTitle title="Join Us" />
+                  </div>;
 
     return (
-      <div className="jumbotron">
+      <div className="hero">
         <Switch>
           <Route exact path="/" render={()=>home} />
           <Route exact path="/favorites" render={()=>favorites} />
           <Route exact path="/join-us" render={()=>join} />
         </Switch>
+        <div className="hero__illustration">
+          <img src={require('../../assets/images/header/illustration.png')} alt="logo" />
+        </div>
+        <div className="hero__cap">
+          <img src={require('../../assets/images/header/cap.png')} alt="logo" />
+        </div>
       </div>
     );
   }
