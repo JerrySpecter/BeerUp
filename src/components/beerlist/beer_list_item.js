@@ -34,7 +34,11 @@ class BeerListItem extends Component {
                     </div>
                       <BeerListModal beer={this.props.beer} />
                   </div>;
-    const item2 =  <h1 className="naslov">Naslov</h1>;
+    const item2 =  <div className="col-3">
+                      <div className="beer-card">
+                        <img className="placeholder-img" src={require('../../assets/images/beer-list/card wireframe.png')} alt="logo" />
+                      </div>
+                    </div>
 
     return (
       <Switch>
