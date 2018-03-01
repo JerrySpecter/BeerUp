@@ -1,0 +1,43 @@
+.btn {
+  font-weight: $font-weight-bold;
+  padding: $btn-padding-y $btn-padding-x;
+  border-radius: $btn-secondary-border-radius;
+  font-size: $btn-font-size;
+  letter-spacing: $letter-spacing-base;
+  text-transform: uppercase;
+
+  &--primary {
+    background-color: $btn-primary-bg-color;
+    color: $btn-primary-color;
+
+    &:hover {
+      background-color: $btn-primary-bg-color-hover;
+      color: $btn-primary-color-hover;
+    }
+
+    &:focus {
+      background-color: $btn-primary-bg-color-focus;
+      color: $btn-primary-color-focus;
+    }
+  }
+
+  &--secondary {
+    border: $btn-secondary-border-width solid $c-y;
+    background-color: $btn-secondary-bg-color;
+    color: white;
+
+    &:hover {
+      background-color: $btn-secondary-bg-color-hover;
+      color: $btn-secondary-color-hover;
+    }
+
+    &:focus {
+      background-color: $btn-secondary-bg-color-focus;
+      color: $btn-secondary-color-focus;
+    }
+  }
+
+  &--sm {
+    padding: 12px 24px;
+  }
+}
