@@ -6,22 +6,25 @@ class ModalBody extends Component {
   render() {
     return (
       <div className="modal-body">
-        <div className="row">
-          <div className="col-4">
-            <img src={this.props.beer.image_url} alt={this.props.beer.name} />
+        <div className="modal__image">
+          <img src={this.props.beer.image_url} alt={this.props.beer.name} />
+        </div>
+        <div className="modal__data">
+          <h2 className="modal__data-title">{this.props.beer.name}</h2>
+          <div className="modal__data-stats">
+            <span className="property">IBU</span>
+            <span className="value">{this.props.beer.ibu}</span>
           </div>
-          <div className="col-8">
-            <h2>{this.props.beer.name}</h2>
-            <div className="stats">
-              <span>{this.props.beer.ibu}</span>
-              <span>{this.props.beer.abv}</span>
-            </div>
-            <p>{this.props.beer.description}</p>
-            <div>
-              <h3>{this.props.beer.ingredients.yeast}</h3>
+          <div className="modal__data-stats">
+            <span className="property">ABV</span>
+            <span className="value">{this.props.beer.abv}</span>
+          </div>
+          <p className="modal__data-description">{this.props.beer.description}</p>
+          <div className="modal__data-ingredients">
+            <h3 className="yeast">{this.props.beer.ingredients.yeast}</h3>
+            <div className="ingredients-lists">
               <MaltList malts={this.props.beer.ingredients.malt} />
               <HopsList hops={this.props.beer.ingredients.hops} />
-
             </div>
           </div>
         </div>

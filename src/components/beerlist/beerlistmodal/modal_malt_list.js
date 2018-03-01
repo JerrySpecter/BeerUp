@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 
 const MaltList = (props) => {
   const ingredientsMalt = props.malts;
-  console.log(ingredientsMalt);
 
   const ingredientsListMalt = ingredientsMalt.map((malt) => {
     return (
-      <ul>
+      <ul key={malt.name}>
         <li>{malt.name}</li>
-        <ul>
-          <li>{malt.amount.value}</li>
+        <ul  className="ingredients-lists__inner">
+          <li>Value: <b>{malt.amount.value}</b></li>
         </ul>
       </ul>
     )
@@ -17,7 +16,8 @@ const MaltList = (props) => {
 
 
   return (
-    <div>
+    <div className="ingredients-lists__wrapper">
+      <h3 className="ingredients-lists__title">Malt</h3>
       {ingredientsListMalt}
     </div>
   )
