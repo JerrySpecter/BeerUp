@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NavJoin extends Component {
   render() {
     return (
       <li className="nav-item active">
-        <a className="nav-link" href="#">Join Us!</a>
+        <Link className="nav-link" to={this.props.href}>{this.props.title}</Link>
       </li>
     );
   }
