@@ -29,9 +29,6 @@ class HeroBanner extends Component {
         <div className="hero__illustration">
           <img src={require('../../assets/images/header/illustration.png')} alt="logo" />
         </div>
-        <div className="hero__cap">
-          <img src={require('../../assets/images/header/cap.png')} alt="logo" />
-        </div>
       </div>
     );
   }
