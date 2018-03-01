@@ -8,8 +8,6 @@ class BeerList extends Component {
       return <BeerListItem key={beer.id} beer={beer} />
     });
 
-    console.log(this);
-
     return (
       <div className="row beer-list">
           <Switch>
