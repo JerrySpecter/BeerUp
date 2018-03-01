@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 168px;
+  height: 208px;
   padding: 24px;
   background-color: $c-w;
   border-radius: 2px;
@@ -34,11 +34,13 @@
 
   &__data {
     width: 70%;
+    padding: 16px;
 
     .beer-card__data-title {
       font-size: 14px;
       font-weight: $font-weight-bold;
       line-height: 1.21428571;
+      text-transform: uppercase;
     }
 
     .beer-card__data-stats {
@@ -54,6 +56,12 @@
         font-weight: 600;
       }
     }
+  }
+
+  .placeholder-img {
+    // intentionally breaking image form
+    width: 100%;
+    height: 100%;
   }
 
   &:hover {
