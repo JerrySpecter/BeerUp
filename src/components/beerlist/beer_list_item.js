@@ -22,18 +22,20 @@ class BeerListItem extends Component {
 
 
   render () {
+    const emptyHeart = <img src={require('../../assets/images/beer-list/heart outline.png')} alt="heart" />;
+    const fullHeart = <img src={require('../../assets/images/beer-list/heart solid.png')} alt="heart" />;
     const item =  <div className="col-3">
-                    <a type="button" href="#" data-toggle="modal" data-target={'#modal' + this.props.beer.id}>
-                      <BeerListItemImg src={this.props.beer.image_url} />
-                      <BeerListItemData name={this.props.beer.name} ibu={this.props.beer.ibu} abv={this.props.beer.abv} />
-                    </a>
-                    <button className="btn btn-primary btn-sm favorites" href="#" role="button" onClick={this.handleClick}>{this.state.itemFavorited ? 'Remove From Favorites' : 'Add To Favorites' }</button>
+                    <div className="beer-card__wrapper">
+                    <div className="beer-card" data-toggle="modal" data-target={'#modal' + this.props.beer.id}>
+                    <BeerListItemImg src={this.props.beer.image_url} />
+                    <BeerListItemData name={this.props.beer.name} ibu={this.props.beer.ibu} abv={this.props.beer.abv} />
+                    </div>
+                    <div className="favorites" onClick={this.handleClick}>{this.state.itemFavorited ? fullHeart : emptyHeart }</div>
+                    </div>
                       <BeerListModal beer={this.props.beer} />
                   </div>;
     const item2 =  <h1 className="naslov">Naslov</h1>;
 
-    // console.log('name: ' + this.props.beer.name + ', state: ' + this.state.itemFavorited)
-    // console.log(this)
     return (
       <Switch>
         <Route exact path="/" render={()=>item} />
