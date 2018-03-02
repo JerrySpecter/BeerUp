@@ -4,7 +4,8 @@ class InputField extends Component {
   render() {
     return (
         <div className="form-group">
-          <input type={this.props.type} className="form-control" id={this.props.id} aria-describedby="emailHelp" placeholder={this.props.placeholder} />
+          <input required type={this.props.type} className="form-control" id={this.props.id} aria-describedby="emailHelp"/>
+          <label className="input-field-placeholder" htmlFor={this.props.id}>{this.props.placeholder}</label>
         </div>
     );
   }

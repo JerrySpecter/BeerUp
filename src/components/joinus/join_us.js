@@ -13,6 +13,7 @@ class JoinUs extends Component {
 
     $submit.on('click', function(e) {
       e.preventDefault();
+      $( ".alert" ).remove();
 
       var url = 'https://reqres.in/api/users';
 
@@ -57,9 +58,11 @@ class JoinUs extends Component {
           rsvp: rsvp
         },
         success: function(response){
+          $('.form__wrapper').prepend('<div class="alert alert-success" role="alert">This is a success alert—check it out!</div>');
           console.log(response);
         },
         error: function(response){
+          $('.form__wrapper').prepend('<div class="alert alert-danger" role="alert">This is a danger alert—check it out!</div>');
           console.log(response);
         }
       });
@@ -69,32 +72,41 @@ class JoinUs extends Component {
   render() {
     return (
         <div className="col-6 offset-3">
-          <form className="">
-            <h3>Personal information</h3>
-            <InputField type="text" placeholder="Full name" id="full-name"/>
+          <div className="form__wrapper">
+            <h2 className="beer-list__title">Quick, join up before we drink all the beer!</h2>
+            <form className="form">
+              <div className="form__section">
+                <h3 className="form__section-title">Personal information</h3>
+                <InputField type="text" placeholder="Full name" id="full-name"/>
+              </div>
 
-            <hr />
+              <hr />
+              <div className="form__section">
+                <h3 className="form__section-title">Contact information</h3>
+                <InputField type="text" placeholder="Email" id="email"/>
+                <InputField type="text" placeholder="Phone Number" id="phone-number"/>
+              </div>
 
-            <h3>Contact information</h3>
-            <InputField type="email" placeholder="Email" id="email"/>
-            <InputField type="text" placeholder="Phone Number" id="phone-number"/>
+              <hr />
+              <div className="form__section">
+                <h3 className="form__section-title">RSVP</h3>
+                <Radio type="radio" id="radio1" name="radio" label="I'm coming!" />
+                <Radio type="radio" id="radio2" name="radio" label="Maybe?" />
+                <Radio type="radio" id="radio3" name="radio" label="Can't make it" />
+                <Textarea id="textarea" rows="3" placeholder="Something you'd like to add?"/>
+              </div>
 
-            <hr />
-
-            <h3>RSVP</h3>
-            <Radio type="radio" id="radio1" name="radio" label="I'm coming!" />
-            <Radio type="radio" id="radio2" name="radio" label="Maybe?" />
-            <Radio type="radio" id="radio3" name="radio" label="Can't make it" />
-            <Textarea id="textarea" rows="3" placeholder="Something you'd like to add?"/>
-
-            <hr />
-
-            <Checkbox type="checkbox" id="checkbox1" label="Let me know about future beerups!" />
-            <Checkbox type="checkbox" id="checkbox2" label="Remind me one day before this beerup!" />
-
-            <Button type="submit" className="btn btn-primary error" label="Submit Error" />
-            <Button type="submit" className="btn btn-primary success" label="Submit Success" />
-          </form>
+              <hr />
+              <div className="form__section">
+                <Checkbox type="checkbox" id="checkbox1" label="Let me know about future beerups!" />
+                <Checkbox type="checkbox" id="checkbox2" label="Remind me one day before this beerup!" />
+              </div>
+              <div className="form__submit-section">
+                <Button type="submit" className="btn btn--primary error" label="Submit Error" />
+                <Button type="submit" className="btn btn--primary success" label="Submit Success" />
+              </div>
+            </form>
+          </div>
         </div>
     );
   }

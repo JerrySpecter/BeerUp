@@ -4,7 +4,8 @@ class Textarea extends Component {
   render() {
     return (
       <div className="form-group">
-        <textarea className="form-control" id={this.props.id} rows={this.props.rows} placeholder={this.props.placeholder}></textarea>
+        <textarea required className="form-control" id={this.props.id} rows={this.props.rows}></textarea>
+        <label className="input-field-placeholder" htmlFor={this.props.id}>{this.props.placeholder}</label>
       </div>
     );
   }
