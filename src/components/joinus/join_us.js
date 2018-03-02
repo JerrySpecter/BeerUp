@@ -71,7 +71,7 @@ class JoinUs extends Component {
 
   render() {
     return (
-        <div className="col-6 offset-3">
+        <div className="col-md-10 col-lg-6 offset-md-1 offset-lg-3">
           <div className="form__wrapper">
             <h2 className="beer-list__title">Quick, join up before we drink all the beer!</h2>
             <form className="form">

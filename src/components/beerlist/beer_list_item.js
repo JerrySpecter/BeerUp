@@ -24,7 +24,7 @@ class BeerListItem extends Component {
   render () {
     const emptyHeart = <img src={require('../../assets/images/beer-list/heart outline.png')} alt="heart" />;
     const fullHeart = <img src={require('../../assets/images/beer-list/heart solid.png')} alt="heart" />;
-    const item =  <div className="col-3">
+    const item =  <div className="col-6 col-sm-4 col-md-4 col-lg-3">
                     <div className="beer-card__wrapper">
                     <div className="beer-card" data-toggle="modal" data-target={'#modal' + this.props.beer.id}>
                     <BeerListItemImg src={this.props.beer.image_url} />
@@ -34,7 +34,7 @@ class BeerListItem extends Component {
                     </div>
                       <BeerListModal beer={this.props.beer} />
                   </div>;
-    const item2 =  <div className="col-3">
+    const item2 =  <div className="col-6 col-sm-4 col-md-4 col-lg-3">
                       <div className="beer-card">
                         <img className="placeholder-img" src={require('../../assets/images/beer-list/card wireframe.png')} alt="logo" />
                       </div>

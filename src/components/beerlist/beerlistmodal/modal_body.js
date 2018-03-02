@@ -11,13 +11,15 @@ class ModalBody extends Component {
         </div>
         <div className="modal__data">
           <h2 className="modal__data-title">{this.props.beer.name}</h2>
-          <div className="modal__data-stats">
-            <span className="property">IBU</span>
-            <span className="value">{this.props.beer.ibu}</span>
-          </div>
-          <div className="modal__data-stats">
-            <span className="property">ABV</span>
-            <span className="value">{this.props.beer.abv}</span>
+          <div className="modal__data-stats-wrapper">
+            <div className="modal__data-stats">
+              <span className="property">IBU</span>
+              <span className="value">{this.props.beer.ibu}</span>
+            </div>
+            <div className="modal__data-stats">
+              <span className="property">ABV</span>
+              <span className="value">{this.props.beer.abv}</span>
+            </div>
           </div>
           <p className="modal__data-description">{this.props.beer.description}</p>
           <div className="modal__data-ingredients">

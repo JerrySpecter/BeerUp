@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 import NavLogo from './nav_logo'
 import NavList from './nav_list'
