@@ -9,25 +9,25 @@
     width: 50%;
 
     .hero__text {
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-base;
     }
 
     .hero__title {
-      font-weight: 700;
+      font-weight: $font-weight-bold;
       font-size: 4.8rem;
       margin-bottom: 64px;
     }
 
     .hero__button {
-      font-weight: 700;
-      padding: 16px 32px;
-      border-radius: 32px;
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-weight: $font-weight-bold;
+      padding: $spacer-base $spacer-base * 2;
+      border-radius: $spacer-base * 2;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-base;
       background-color: yellow;
-      color: black;
+      color: $c-b;
     }
   }
 

@@ -1,6 +1,6 @@
 .navbar {
   background-color: transparent;
-  padding: 16px 0;
+  padding: $spacer-base 0;
 
   .navbar-brand {
     display: flex;
@@ -19,13 +19,13 @@
       align-items: baseline;
 
       .nav__item {
-        padding: 0 24px;
+        padding: 0 $spacer-sm * 2;
 
         .nav__item-link {
-          font-weight: 600;
-          font-size: 14px;
+          font-weight: $font-weight-semi-bold;
+          font-size: $font-size-md;
           color: $c-w;
-          letter-spacing: 2px;
+          letter-spacing: $letter-spacing-base;
           position: relative;
           padding: 8px 0;
 
@@ -98,11 +98,12 @@
           align-items: center;
 
           .nav__item {
-            padding: 24px;
+            padding: $spacer-sm * 2;
           }
         }
       }
     }
+
 
     .menu-icon-wrapper {
       display: inline-block;
@@ -114,18 +115,6 @@
         background-color: $c-y;
         margin: 6px 0;
         transition: 0.4s;
-      }
-
-      &.change .bar1 {
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-
-      &.change .bar2 {
-        opacity: 0;
-      }
-
-      &.change .bar3 {
-        transform: rotate(45deg) translate(-8px, -8px);
       }
     }
   }
