@@ -8,9 +8,12 @@ class Footer extends Component {
     return (
       <footer>
         <div className="container">
-          <NavLogo />
-          <FooterList />
-          <FooterSocialList />
+          <div className="footer__wrapper">
+            <NavLogo />
+            <FooterList />
+            <FooterSocialList />
+          </div>
+          <span className="copyright">&copy; 2018 All rights reserved.</span>
         </div>
       </footer>
     );
