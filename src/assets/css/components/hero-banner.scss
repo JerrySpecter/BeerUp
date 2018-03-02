@@ -45,4 +45,41 @@
   .hero__cap {
 
   }
+
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .hero__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .hero__title {
+        text-align: center;
+        font-size: 2.4rem;
+      }
+
+      a {
+        margin-bottom: 600px;
+      }
+    }
+
+    .hero__illustration {
+      width: 80%;
+      top: 50%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .hero__wrapper {
+      a {
+        margin-bottom: 400px;
+      }
+    }
+  }
 }
