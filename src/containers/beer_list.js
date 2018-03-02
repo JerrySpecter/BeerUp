@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BeerListItem from '../components/beerlist/beer_list_item';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class BeerList extends Component {
   render() {

@@ -5,16 +5,16 @@ class FooterSocialListItem extends Component {
     return (
       <ul className="social-list">
         <li className="social-list__icon">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="/"><i className="fab fa-facebook-f"></i></a>
         </li>
         <li className="social-list__icon">
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="/"><i className="fab fa-twitter"></i></a>
         </li>
         <li className="social-list__icon">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="/"><i className="fab fa-linkedin-in"></i></a>
         </li>
         <li className="social-list__icon">
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="/"><i className="fab fa-pinterest-p"></i></a>
         </li>
       </ul>
     );

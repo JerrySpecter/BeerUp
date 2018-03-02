@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import BeerListModal from './beer_list_modal';
 import BeerListItemData from './beerlistitem/beer_list_item_data';
 import BeerListItemImg from './beerlistitem/beer_list_item_img';

@@ -4,7 +4,7 @@ class NavLogo extends Component {
   render() {
     return (
       <div className="brand-wrapper">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img src={require('../../assets/images/header/logo/symbol.png')} alt="logo" />
           <img src={require('../../assets/images/header/logo/logo.png')} alt="logo" />
         </a>

@@ -14,7 +14,7 @@ class JoinUs extends Component {
     $submit.on('click', function(e) {
       e.preventDefault();
       $( ".alert" ).remove();
-
+      // 2 different urls to simulate 2 different responses
       var url = 'https://reqres.in/api/users';
 
       if($(this).hasClass('error')) {

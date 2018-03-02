@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Sidebar from './sidebar';
 import BeerList from './beer_list';
 import JoinUs from '../components/joinus/join_us';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 class Main extends Component {
