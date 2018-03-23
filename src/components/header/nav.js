@@ -6,7 +6,7 @@ import NavList from './nav_list'
 class Navigation extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navigation__wrapper">
         <NavLogo />
         <NavList />
       </nav>

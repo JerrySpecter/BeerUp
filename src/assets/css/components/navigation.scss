@@ -1,5 +1,7 @@
-.navbar {
+.navigation__wrapper {
   background-color: transparent;
+  display: flex;
+  justify-content: space-between;
   padding: $spacer-base 0;
 
   .navbar-brand {
@@ -11,10 +13,11 @@
     }
   }
 
-  .navbar-collapse {
+  .navigation {
     justify-content: flex-end;
 
-    .navbar-nav {
+    .navigation__list {
+      list-style: none;
       display: flex;
       align-items: baseline;
 
@@ -54,28 +57,59 @@
         }
       }
     }
+
+    &.collapse {
+      display: block;
+    }
   }
 
+  .navbar-toggler {
+    display: none;
+  }
 
+  .menu-icon-wrapper {
+    display: inline-block;
 
-
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: $c-y;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
 
   @media screen and (max-width: 991px ) {
     align-items: baseline;
-
-    .navbar-collapse {
-      display: flex;
-      flex-basis: initial;
-
-      .navbar-nav {
-        flex-direction: row;
-      }
-    }
   }
 
   @media screen and (max-width: 767px ) {
     display: flex;
     flex-direction: column;
+
+    .navigation {
+      transition: all .5s;
+      overflow: hidden;
+      width: 100%;
+
+      .navigation__list {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        .nav__item {
+          padding: $spacer-base 0;
+        }
+      }
+
+      &.collapse {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+    }
 
     .brand-wrapper {
       display: flex;
@@ -85,36 +119,44 @@
       width: 100%;
     }
 
-    .navbar-collapse {
-      display: none;
+    .navbar-toggler {
+      outline: 0;
+      display: block;
 
-      &.show {
-        display: block;
-        width: 100%;
+      .menu-icon-wrapper {
+        .bar1 {
+          transform-origin: center;
+          transform: rotate(45deg) translate(8px, 6px);
+        }
 
-        .navbar-nav {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+        .bar2 {
+          opacity: 0;
+        }
 
-          .nav__item {
-            padding: $spacer-sm * 2;
-          }
+        .bar3 {
+          transform-origin: center;
+          transform: rotate(-45deg) translate(9px, -7px);
         }
       }
-    }
 
+      &.collapsed {
+        .menu-icon-wrapper {
+          display: inline-block;
 
-    .menu-icon-wrapper {
-      display: inline-block;
-      cursor: pointer;
+          .bar1 {
+            transform-origin: center;
+            transform: rotate(0) translateY(0);
+          }
 
-      .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 5px;
-        background-color: $c-y;
-        margin: 6px 0;
-        transition: 0.4s;
+          .bar2 {
+            opacity: 1;
+          }
+
+          .bar3 {
+            transform-origin: center;
+            transform: rotate(0) translateY(0);
+          }
+        }
       }
     }
   }

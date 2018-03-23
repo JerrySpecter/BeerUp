@@ -6,8 +6,8 @@ import NavJoin from './nav_join';
 class NavList extends Component {
   render() {
     return (
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+      <div className="navigation collapse" id="navbarNav">
+        <ul className="navigation__list">
           <NavListItem title="Home" href="/" />
           <NavListItem title="Favorites" href="/favorites" />
           <NavJoin title="Join" href="/join-us" />

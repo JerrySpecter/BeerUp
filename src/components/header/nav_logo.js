@@ -8,7 +8,7 @@ class NavLogo extends Component {
           <img src={require('../../assets/images/header/logo/symbol.png')} alt="logo" />
           <img src={require('../../assets/images/header/logo/logo.png')} alt="logo" />
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div className="menu-icon-wrapper">
             <div className="bar1"></div>
             <div className="bar2"></div>
